@@ -1,4 +1,4 @@
-const Content = ({ title }) => (
+const Content = ({ title, temperature, humidity }) => (
   <div className="flex flex-col flex-wrap sm:flex-row">
     <div className="w-full md:w-4/12 pr-2 mb-6">
       <div className="shadow rounded-2xl p-4 bg-white dark:bg-gray-800">
@@ -21,7 +21,7 @@ const Content = ({ title }) => (
         </div>
         <div className="flex flex-col justify-start">
           <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-            34,500
+            {temperature}
             <span className="text-sm">$</span>
           </p>
           <div className="flex items-center text-green-500 text-sm">
@@ -59,7 +59,8 @@ const Content = ({ title }) => (
         </div>
         <div className="flex flex-col justify-start">
           <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-            10,000
+            {humidity}
+            
             <span className="text-sm">$</span>
           </p>
           <div className="flex items-center text-green-500 text-sm">
