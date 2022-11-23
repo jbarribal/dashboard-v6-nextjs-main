@@ -1,5 +1,10 @@
+import Chart from './chart';
+import DoubleChart from './doublechart';
+
 const Content = ({ title, temperature, humidity }) => (
   <div className="flex flex-col flex-wrap sm:flex-row">
+
+    {/* current electricity card */}
     <div className="w-full md:w-4/12 pr-2 mb-6">
       <div className="shadow rounded-2xl p-4 bg-white dark:bg-gray-800">
         <div className="flex items-center">
@@ -39,7 +44,11 @@ const Content = ({ title, temperature, humidity }) => (
           </div>
         </div>
       </div>
+  
     </div>
+
+    
+    {/* Water Cost Card */}
     <div className="w-full md:w-4/12 pr-2 mb-6">
       <div className="shadow rounded-2xl p-4 bg-white dark:bg-gray-800">
         <div className="flex items-center">
@@ -79,6 +88,8 @@ const Content = ({ title, temperature, humidity }) => (
         </div>
       </div>
     </div>
+
+    {/* utility cost card */}
     <div className="w-full md:w-4/12">
       <div className="shadow rounded-2xl p-4 bg-white dark:bg-gray-800">
         <div className="flex items-center">
@@ -116,32 +127,38 @@ const Content = ({ title, temperature, humidity }) => (
           </div>
         </div>
       </div>
+    
+    
     </div>
 
+    {/* power consumption card */}
     <div className="shadow-lg rounded-xl w-full md:w-3/12 p-4 md:mr-2 bg-white dark:bg-gray-800 relative overflow-hidden mt-8">
       <p className="text-gray-600 font-light dark:text-white text-xl font-medium mb-6">
         Power Consumption Graph
       </p>
       <div className="grid grid-cols-3 gap-4">
-
+        <Chart />
       </div>
     </div>
+
+    {/* water consumption card */}
     <div className="shadow-lg rounded-xl w-full md:w-4/12 mt-8 md:ml-2 p-4 bg-white dark:bg-gray-800 text-gray-700 relative overflow-hidden">
-      <a href="#" className="w-full h-full block">
         <div className="w-full">
           <p className="text-gray-700 dark:text-white  text-2xl font-light mb-4">
             Water Consumption Graph
           </p>
           <div className="flex items-center justify-between text-gray-400 text-sm">
+            <Chart />
           </div>
         </div>
-      </a>
     </div>
 
+    {/* total utility consumption card */}
     <div className="shadow-lg rounded-xl w-full md:w-4/12 md:ml-4 mt-8 p-4 bg-white dark:bg-gray-800 relative overflow-hidden">
       <div className="w-full flex items-center justify-between mb-8">
         <p className="text-gray-800 dark:text-white text-xl">Total Utility Consumption</p>
       </div>
+      <DoubleChart />
     </div>
   </div>
 );
