@@ -16,9 +16,21 @@ datasource db {
 model Electrcity {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
-  watts     Int
-  price     Int
-  cost      Int
+  Voltage  Float
+  Current  Float
+  Power    Float
+  Energy Float
+  Frequency Float
+  PowerFactor Float
+
+}
+
+model Power {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  price Float
+  energy Float
+  total Float
 
 }
 
