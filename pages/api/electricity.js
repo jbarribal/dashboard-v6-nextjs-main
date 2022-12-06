@@ -30,17 +30,17 @@ async function createInquiry(req, res) {
   }
 }
 
-async function getPower(req, res) {
-  try {
-    const power = await prisma.electricity.findMany({
-      orderBy: {
-        createdAt: 'desc'
-      },
-      take: 1
-    })
-    return res.status(200).json(power, { success: true })
-  } catch (error) {
-    console.error('Request error', error)
-    res.status(500).json({ error: 'Error getting power', success: false })
-  }
-}
+// async function getPower(req, res) {
+//   try {
+//     const power = await prisma.electricity.findMany({
+//       orderBy: {
+//         createdAt: 'desc'
+//       },
+//       take: 1
+//     })
+//     return res.status(200).json(power, { success: true })
+//   } catch (error) {
+//     console.error('Request error', error)
+//     res.status(500).json({ error: 'Error getting power', success: false })
+//   }
+// }
