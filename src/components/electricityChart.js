@@ -8,19 +8,19 @@ import {
     Tooltip,
     Legend
   } from "recharts";
-import { doubleData } from '../../database/data';
+import { data } from '../../database/electricity_data';
 
 const ElectricityChart = () => {
   return (
     <div>
         <BarChart
-        width={450}
+        width={500}
         height={300}
-        data={doubleData}
+        data={data}
         margin={{
             top: 5,
             right: 30,
-            left: 20,
+            left: 0,
             bottom: 5
         }}
         >
@@ -29,8 +29,7 @@ const ElectricityChart = () => {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="pv" fill="#8884d8" />
-            <Bar dataKey="uv" fill="#82ca9d" />
+            <Bar dataKey="kwh" fill="#82ca9d" />
         </BarChart>
     </div>
   )
