@@ -10,11 +10,11 @@ import {
   } from "recharts";
 import { doubleData } from '../../database/data';
 
-const DoubleChart = () => {
+const WaterChart = () => {
   return (
     <div>
         <BarChart
-        width={500}
+        width={450}
         height={300}
         data={doubleData}
         margin={{
@@ -36,4 +36,4 @@ const DoubleChart = () => {
   )
 }
 
-export default DoubleChart
+export default WaterChart
