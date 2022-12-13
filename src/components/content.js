@@ -3,7 +3,7 @@ import TotalChart from './totalChart';
 import ElectricityChart from './electricityChart';
 import WaterChart from './waterChart';
 
-const Content = ({ title, temperature, humidity }) => (
+const Content = ({ power , voltage , current , energy, totalFlow }) => (
   <div className="flex flex-col flex-wrap sm:flex-row">
 
     {/* current electricity card */}
@@ -23,12 +23,12 @@ const Content = ({ title, temperature, humidity }) => (
             </svg>
           </span>
           <p className="text-md text-black dark:text-white ml-2">
-            {title || 'Current Electricity Cost'}
+            {'Current Electricity Cost'}
           </p>
         </div>
         <div className="flex flex-col justify-start">
           <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-            {temperature}
+            {energy}
             <span className="text-sm">$</span>
           </p>
           <div className="flex items-center text-green-500 text-sm">
@@ -70,7 +70,7 @@ const Content = ({ title, temperature, humidity }) => (
         </div>
         <div className="flex flex-col justify-start">
           <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-            {humidity}
+            {totalFlow}
             
             <span className="text-sm">$</span>
           </p>

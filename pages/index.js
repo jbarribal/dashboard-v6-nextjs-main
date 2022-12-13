@@ -4,8 +4,21 @@ import useSensor from '../src/swr';
 export default function HomePage() {
 
   const { data, isLoading, isError } = useSensor()
-  let { V5: temperature, V6: humidity } = data || {}
+  let { 
+    V4: current,
+    V5: power, 
+    V6: voltage,  
+    V7: energy,
+    V8: totalFlow,
+
+  } = data || {}
 
   
-  return <Content  temperature={temperature} humidity={humidity}/>; 
+  return <Content  
+  current={current} 
+  power={power}
+  voltage={voltage}
+  energy={energy}
+  totalFlow={totalFlow}
+  />; 
 }
